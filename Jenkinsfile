@@ -19,6 +19,14 @@ pipeline{
                 sh "npm install"
             }
         }
+        // issues faces in above stage
+        // 1. missed to include tools installed step above
+        // 2.
+        stage('building npm app'){
+            steps{
+                sh "npm run build"
+            }
+        }
     }
     post{
         always{
