@@ -2,9 +2,9 @@ pipeline{
     agent any
 
     stages{
-        stage('Hello World'){
+        stage('SCM Checkout'){
             steps{
-                echo "Hello World"
+                git branch:'main', credentialsId:'github' URL:'https://github.com/PraveenReddy2510/3-Tier-Full-Stack.git'
             }
         }
     }
