@@ -9,3 +9,7 @@ pipeline{
         }
     }
 }
+
+post{
+    cleanWs()
+}
