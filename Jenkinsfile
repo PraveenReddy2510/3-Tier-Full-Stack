@@ -27,6 +27,12 @@ pipeline{
                 sh "npm run build"
             }
         }
+
+        stage('testing npm app'){
+            steps{
+                sh "npm run test"
+            }
+        }
     }
     post{
         always{
