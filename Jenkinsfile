@@ -50,12 +50,12 @@ pipeline{
                 withSonarQubeEnv('sonar-server') {
                     // Run SonarQube analysis for backend
                     dir('backend') {
-                        sh 'sonar-scanner -Dsonar.projectKey=my-backend-project -Dsonar.sources=. -Dsonar.exclusions=**/node_modules/**'
+                        sh 'sonar-tool -Dsonar.projectKey=my-backend-project -Dsonar.sources=. -Dsonar.exclusions=**/node_modules/**'
                     }
 
                     // Run SonarQube analysis for frontend if applicable
                     dir('frontend') {
-                        sh 'sonar-scanner -Dsonar.projectKey=my-frontend-project -Dsonar.sources=. -Dsonar.exclusions=**/node_modules/**'
+                        sh 'sonar-tool -Dsonar.projectKey=my-frontend-project -Dsonar.sources=. -Dsonar.exclusions=**/node_modules/**'
                     }
                 }
             }
