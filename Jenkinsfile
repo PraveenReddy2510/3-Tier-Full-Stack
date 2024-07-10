@@ -21,7 +21,9 @@ pipeline{
         // 2.
         stage('installing dependencies'){
             steps{
-                sh "npm install"
+                dir ('backend'){
+                    sh "npm install"
+                }
             }
         }
         // issues faces in above stage
