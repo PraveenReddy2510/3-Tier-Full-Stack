@@ -6,8 +6,8 @@ pipeline{
     }
 
     environment{
-        SONARQUBE_URL: ''
-        SONARQUBE_CREDS: ''
+        SONARQUBE_URL: 'abcd'
+        SONARQUBE_CREDS: 'sonar-cred'
     }
 
     stages{
