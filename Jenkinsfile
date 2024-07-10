@@ -31,13 +31,17 @@ pipeline{
         // 2.
         stage('building npm app'){
             steps{
-                sh "npm run build"
+                dir ('backend'){
+                    sh "npm run build"
+                }
             }
         }
 
         stage('testing npm app'){
             steps{
-                sh "npm run test"
+                dir ('backend'){
+                    sh "npm run test"
+                }
             }
         }
     }
