@@ -13,11 +13,11 @@ const flash = require('connect-flash');
 const methodOverride = require('method-override');
 const LocalStrategy = require('passport-local');
 const mongoSanitize = require('express-mongo-sanitize');
-const ExpressError = require('./utils/ExpressError');
+const ExpressError = require('../utils/ExpressError');
 const User = require('./models/user');
-const userRoutes = require('./routes/users');
-const campgroundRoutes = require('./routes/campgrounds');
-const reviewRoutes = require('./routes/reviews');
+const userRoutes = require('../routes/users');
+const campgroundRoutes = require('../routes/campgrounds');
+const reviewRoutes = require('../routes/reviews');
 
 const MongoDBStore = require("connect-mongo")(session);
 

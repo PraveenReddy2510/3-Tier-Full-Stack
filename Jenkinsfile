@@ -5,6 +5,11 @@ pipeline{
         nodejs "nodejs"
     }
 
+    environment{
+        SONARQUBE_URL: ''
+        SONARQUBE_CREDS: ''
+    }
+
     stages{
         stage('SCM Checkout'){
             steps{
