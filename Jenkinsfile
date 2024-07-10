@@ -43,7 +43,7 @@ pipeline{
         stage('Run SonarQube Analysis') {
             steps {
                 script{
-                    withSonarQubeEnv(credentialsId: 'sonar-server') {
+                    withSonarQubeEnv(credentialsId: 'sonar-cred') {
                         // Run SonarQube analysis for backend
                         dir('backend') {
                             sh 'sonar-scanner -Dsonar.projectKey=my-backend-project -Dsonar.sources=. -Dsonar.exclusions=**/node_modules/**'
